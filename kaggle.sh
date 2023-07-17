@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # - Dependencies - #
+env TF_CPP_MIN_LOG_LEVEL=1
 apt -y update -qq
 apt -y install -qq aria2
 wget http://launchpadlibrarian.net/367274644/libgoogle-perftools-dev_2.5-2.2ubuntu3_amd64.deb
