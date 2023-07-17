@@ -17,9 +17,9 @@ python -m pip cache purge
 
 # pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
-!apt-get -y install -qq aria2
-!curl -Lo microsoftexcel.zip https://huggingface.co/nolanaatama/colab/resolve/main/microsoftexcel140.zip
-!unzip /content/microsoftexcel.zip
+apt-get -y install -qq aria2
+curl -Lo microsoftexcel.zip https://huggingface.co/nolanaatama/colab/resolve/main/microsoftexcel140.zip
+unzip /content/microsoftexcel.zip
 
 # --- MODELS, LORAS, VAE --- #
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phoenix-1708/DR_NED/resolve/main/malklat-woman-1611-malklat.ckpt -d /content/microsoftexcel/models/Stable-diffusion -o malklat-woman-1611-malklat.ckpt
